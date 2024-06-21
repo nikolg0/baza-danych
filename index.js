@@ -29,7 +29,7 @@ app.get("/mongoose", function (req, res) {
 
 /* wyświetlanie wszystkich użytkowników */
 app.get("/mongoose", function (req, res) {
-  Users.find()
+  User.find()
     .then((users) => {
       res.render("home", { users });
     })

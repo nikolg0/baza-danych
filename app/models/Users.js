@@ -7,8 +7,8 @@ const User = new mongoose.Schema({
     suite: String,
     city: String,
     zipcode: String,
-    website: String,
   },
+  website: String,
 });
 
 module.exports = mongoose.model("User", User);
