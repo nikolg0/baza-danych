@@ -1,18 +1,23 @@
-<h1>Lista użytkowników</h1>
-<table>
+<h1 class="text-center">Lista użytkowników</h1>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
-      <th>Imię i nazwisko</th>
-      <th>Adres</th>
-      <th>Strona WWW</th>
+      <th scope="col">Imię i nazwisko</th>
+      <th scope="col">Adres</th>
+      <th scope="col">Strona WWW</th>
     </tr>
   </thead>
 
   <tbody>
-    <tr>
-      <td>{{name}}</td>
-      <td>{{address}}</td>
-      <td><a href="http://{{website}}">{{website}}</a></td>
-    </tr>
+    {{#each users}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{address.street}}
+          {{address.suite}}
+          {{address.city}}
+          {{address.zipcode}}</td>
+        <td><a href="http://{{website}}">{{website}}</a></td>
+      </tr>
+    {{/each}}
   </tbody>
 </table>
